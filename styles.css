@@ -1,0 +1,1066 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.navbar {
+    width: 100%;
+    background: #050505;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    gap: 25px;
+}
+
+.brand img {
+    width: 190px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd000;
+}
+
+.btn-nav {
+    background: #ffd000;
+    color: #000;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 70px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(
+        90deg,
+        #080808 0%,
+        #111111 70%,
+        #080808 100%
+    );
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-logo {
+    width: 430px;
+    max-width: 100%;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ffd000;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 20px;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #ffd000;
+    color: #000;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid #ffd000;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #ffd000;
+    color: #000;
+}
+
+
+/* =========================
+   BENEFICIOS
+========================= */
+
+.hero-info {
+    min-width: 230px;
+}
+
+.hero-info h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.hero-benefits {
+    margin-top: 25px;
+}
+
+.hero-benefit {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.hero-benefit-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ffd000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hero-benefit-icon::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #ffd000;
+    border-radius: 50%;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+}
+
+.section-title h2 span {
+    color: #ffd000;
+}
+
+.section-title p {
+    color: #bbb;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.services {
+    max-width: 1250px;
+    margin: auto;
+    padding: 90px 40px;
+}
+
+.services-grid {
+    width: min(1200px, 100%);
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+.service-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 280px;
+    padding: 30px;
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffd000;
+    box-shadow: 0 12px 30px rgba(255, 208, 0, 0.15);
+}
+
+.service-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    overflow-wrap: break-word;
+}
+
+.service-card a {
+    display: inline-block;
+    margin-top: auto;
+    color: #ffd000;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    color: white;
+}
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.about {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contact {
+    text-align: center;
+    padding: 90px 30px;
+    background: #111;
+}
+
+.contact h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TRABAJOS
+========================= */
+
+.works {
+    max-width: 1250px;
+    margin: auto;
+    padding: 100px 20px 80px;
+    background: #0b0b0b;
+}
+
+.works .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.works .section-title h2 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.works .section-title h2 span {
+    color: #ffd000;
+}
+
+.works .section-title p {
+    color: #d0d0d0;
+    font-size: 18px;
+}
+
+.works-grid {
+    width: min(1200px, 100%);
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.work-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #333;
+    background: #151515;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.work-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(255, 204, 0, 0.25);
+}
+
+.work-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #050505;
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    border-top: 1px solid #222;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        min-height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-info {
+        text-align: left;
+    }
+
+    .services {
+        padding: 80px 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding: 15px;
+    }
+
+    .brand img {
+        width: 160px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .btn-nav {
+        padding: 11px 18px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-logo {
+        width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .services {
+        padding: 70px 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .service-card {
+        min-height: 250px;
+    }
+
+    .works {
+        padding: 80px 15px 60px;
+    }
+
+    .works .section-title h2 {
+        font-size: 32px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about {
+        padding: 70px 20px;
+    }
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================
+   PANTALLAS MUY PEQUEÑAS
+========================= */
+
+@media (max-width: 500px) {
+
+    .hero-logo {
+        width: 280px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
+/* ==========================================
+   CORRECCIÓN PARA EL INDEX.HTML ACTUAL
+========================================== */
+
+/* MENÚ */
+header {
+    width: 100%;
+    background: #050505;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    width: 100%;
+}
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffd000;
+}
+
+
+/* BENEFICIOS */
+.benefits {
+    width: 100%;
+    background: #0b0b0b;
+    padding: 35px 20px;
+}
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.hero-benefit {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    min-height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.hero-benefit:hover {
+    border-color: #ffd000;
+    transform: translateY(-4px);
+}
+
+.hero-benefit h3 {
+    color: #ffd000;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.hero-benefit p {
+    color: #ddd;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* CORRECCIÓN DEL HERO */
+.hero {
+    max-width: none;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* BOTONES */
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+
+/* SERVICIOS */
+.services {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* TRABAJOS */
+.works {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .benefits-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-benefit {
+        min-height: 110px;
+    }
+}
+/* =========================
+   IMAGEN PRINCIPAL DEL INICIO
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 6%;
+    min-height: 600px;
+}
+
+.hero-content {
+    width: 45%;
+    max-width: 600px;
+    flex-shrink: 0;
+}
+
+.hero-image {
+    width: 50%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    border-radius: 18px;
+    border: 1px solid #333;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .hero-image img {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero-image img {
+        height: 300px;
+    }
+
+}
+/* =========================
+   EMPRESAS Y GIMNASIOS
+========================= */
+
+.clientes {
+    padding: 100px 20px;
+    background: #0b0b0b;
+}
+
+.clientes .section-title {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.clientes .section-title h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.clientes .section-title p {
+    font-size: 18px;
+    color: #cccccc;
+}
+
+.clientes-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.cliente-card {
+    background: #151515;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.cliente-card:hover {
+    border-color: #ffd000;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 208, 0, 0.15);
+}
+
+.cliente-card img {
+    width: 150px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cliente-card h3 {
+    margin: 0;
+    color: #ffd000;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clientes .section-title h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVE - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .clientes {
+        padding: 70px 15px;
+    }
+
+    .clientes .section-title h2 {
+        font-size: 30px;
+    }
+
+    .clientes .section-title p {
+        font-size: 16px;
+    }
+
+    .clientes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cliente-card {
+        min-height: 200px;
+    }
+}
+/* =========================
+   MEJORA SECCIÓN CLIENTES
+========================= */
+
+.cliente-card {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 25px;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.cliente-card:hover {
+    border-color: #ffd000;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 208, 0, 0.18);
+}
+
+.cliente-card img {
+    width: 150px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.cliente-card:hover img {
+    transform: scale(1.06);
+}
+
+.cliente-card h3 {
+    color: #ffd000;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+/* =========================
+   AJUSTE FINAL - CLIENTES
+========================= */
+
+.clients-grid,
+.clientes-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Evita que las tarjetas se salgan */
+.client-card,
+.cliente-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .clients-grid,
+    .clientes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .clients-grid,
+    .clientes-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
